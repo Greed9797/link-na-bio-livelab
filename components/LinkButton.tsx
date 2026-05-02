@@ -1,12 +1,18 @@
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { LinkItem } from "@/lib/links";
 
 export default function LinkButton({ href, parts }: LinkItem) {
+  const isExternal = /^https?:\/\//.test(href) || href === "#";
+  const Tag = isExternal ? "a" : Link;
+  const externalProps = isExternal
+    ? { target: href !== "#" ? "_blank" : undefined, rel: href !== "#" ? "noopener noreferrer" : undefined }
+    : {};
+
   return (
-    <a
+    <Tag
       href={href}
-      target={href !== "#" ? "_blank" : undefined}
-      rel={href !== "#" ? "noopener noreferrer" : undefined}
+      {...externalProps}
       className="relative block h-[150px] w-[273px] overflow-hidden rounded-[12px] bg-[#0d0d0d] transition-opacity hover:opacity-90 md:h-[140px] md:w-[360px]"
     >
       {/* Orange line at top center */}
@@ -31,6 +37,6 @@ export default function LinkButton({ href, parts }: LinkItem) {
           </span>
         </div>
       </div>
-    </a>
+    </Tag>
   );
 }
