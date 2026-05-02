@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.env*.local
+.DS_Store
+*.log
+.vercel
+public/bg-studio.jpg
+public/bg-side.jpg
+public/btn1-img.jpg
