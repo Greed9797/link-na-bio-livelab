@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <p className="mt-[20px] text-[8px] font-light text-[#595959] md:mt-[14px]">
+        <p className="mt-[20px] text-[8px] font-light text-[#8a8a8a] md:mt-[14px]">
           Todos os direitos reservados
         </p>
       </div>
