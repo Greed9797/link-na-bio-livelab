@@ -25,7 +25,7 @@ export default function LinkButton({ href, parts }: LinkItem) {
         </p>
 
         <div className="flex justify-center">
-          <span className="inline-flex h-[38px] items-center gap-[8px] rounded-[8px] bg-[#FE5206] px-[20px] md:h-[34px]">
+          <span className="inline-flex h-[38px] items-center gap-[8px] rounded-[8px] bg-[#CC4400] px-[20px] md:h-[34px]">
             <span className="text-[14px] font-medium leading-none text-white">Clique aqui</span>
             <ArrowUpRight className="h-[14px] w-[14px] text-white" strokeWidth={2.5} />
           </span>
